@@ -1,17 +1,20 @@
-import Nav from "./nav";
-import Hero from "./hero";
-import Footer from "./footer";
-import Service from "./services";
-import Project from "./project";
+import Nav from './nav';
+import Hero from './hero';
+import Footer from './footer';
+import Service from './services';
+import Project from './project';
+import Seperator from './Seperator';
+
 const main = () => {
-  return (
-    <div className="bg-indigo-500">
-      <Nav />
-      <Hero />
-      <Project />
-      <Service />
-      <Footer />
-    </div>
-  );
+	return (
+		<div>
+			<Nav />
+			<Hero />
+			<Seperator />
+			<Service />
+			<Project />
+			<Footer />
+		</div>
+	);
 };
 export default main;

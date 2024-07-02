@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-image: linear-gradient(to right bottom, #240242, #3d0c68, #571a91, #7228bd, #8e38eb);
+}
+
+.scroll-container {
+	height: 100vh;
+	overflow-y: scroll;
+}
+.section {
+	height: 100vh;
+}
+
+.arrow {
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform: rotate(0deg);
+}
+
+.arrow span {
+	display: block;
+	width: 1.5vw;
+	height: 1.5vw;
+	border-bottom: 5px solid white;
+	border-right: 5px solid white;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+.activator:hover + .svg-underlay {
+	transform: translateX(-100px);
+	transition: transform 0.5s ease-in-out;
+}
+
+.svg-underlay {
+	transition: transform 0.5s ease-in-out;
+	opacity: 0.3;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
